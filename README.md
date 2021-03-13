@@ -23,8 +23,7 @@ To analyze the depreciation value of cars over the years by analyzing the sale p
 
 * Logistic Regression - for identifying trends 
 * Random Forest - for recommendation system 
-* K-Means - for data clustering  
-* KNN - 
+* K-Means / KNN - for data clustering / categorization
 
 ### Deployment 
 
