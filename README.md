@@ -1,4 +1,4 @@
-![Automotive Image](images/pic1.jpg)
+![Automotive Image](images/pic.jpg)
 
 ## Automotive Value Analysis 
 
