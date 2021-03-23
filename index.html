@@ -92,7 +92,7 @@
       <div class="container" data-aos="fade-up">
         <div class="row about-container">
 
-          <div class="col-lg-6 content order-lg-1 order-2">
+          <div class="col-lg-12 content order-lg-1 order-2">
             <h2 class="title">Tell us about your car</h2>
             <!-- <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -103,40 +103,33 @@
               <div class="icon"><i class="fa fa-automobile"></i></div>
               <h4 class="title"><a href="">What type of vehicle do you have?</a></h4>
 
-              <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Type
-              </button>
-
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-              </div>
+              <select class="form-select first" aria-label="Default select example">
+                <option selected>Car Type</option>
+              </select>
 
             </div>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
 
               <div class="icon"><i class="fa fa-gears"></i></div>
-              <h4 class="title"><a href="">Let's set up a profile</a></h4>
+              <h4 class="title"><a href="">Let's set up a profile:</a></h4>
 
               <h3 class="subtitle">Manufacturer and Model type?</h3>
 
-              <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Manufacturer/Model 
-              </button>
-
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-              </div>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Manufacturer/Model</option>
+              </select>
 
               <h3 class="subtitle">Year of make?</h3>
               <input type="number" id="tentacles" name="tentacles" class="number-input" min="1000" max="2021">
 
               <h3 class="subtitle">Fuel Type?</h3>
-              <button type="button" class="btn btn-outline-secondary btn-sm" style="margin-left:100px;">Diesel</button>
-              <button type="button" class="btn btn-outline-secondary btn-sm">Petrol</button>
-              <button type="button" class="btn btn-outline-secondary btn-sm">Hybrid</button>
-              <button type="button" class="btn btn-outline-secondary btn-sm">Electric</button>
-              <button type="button" class="btn btn-outline-secondary btn-sm">Other</button>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Diesel</option>
+                <option value="1">Petrol/Gas</option>
+                <option value="2">Hybrid</option>
+                <option value="3">Electric</option>
+              </select>
 
             </div>
 
@@ -150,39 +143,49 @@
               <div class="icon"><i class="fa fa-bars"></i></div>
               <h4 class="title"><a href="">Just a few more details, </a></h4>
               
-              <h3 class="subtitle">What condition is the car in?</h3>
-              <form class="description-form">
-                <div class="radio-inline">
-                  <label><input type="radio" name="optradio">Don't want to say</label>
-                </div>
-                <div class="radio-inline">
-                  <label><input type="radio" name="optradio">Good</label>
-                </div>
-                <div class="radio-inline">
-                  <label><input type="radio" name="optradio">Excellent</label>
-                </div>
-                <div class="radio-inline">
-                  <label><input type="radio" name="optradio">Like New</label>
-                </div>
-                <div class="radio-inline">
-                  <label><input type="radio" name="optradio">New</label>
-                </div>
+              <h3 class="subtitle">What condition is the vehicle in?</h3>
+              <form>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio">Don't want to say
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio">Good
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio">Excellent
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio">Like New
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio">New
+                </label>
               </form>
 
               <h3 class="subtitle">Paint colour?</h3>
-              <button type="button" class="firstbtn btn btn-primary btn-sm">Blue</button>
-              <button type="button" class="btn btn-secondary btn-sm">Grey</button>
-              <button type="button" class="btn btn-light btn-sm">White</button>
-              <button type="button" class="btn btn-danger btn-sm">Red</button>
-              <button type="button" class="btn btn-dark btn-sm">Black</button>
-              <button type="button" class="btn btn-info btn-sm">Other</button>
+              <form>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio">Black
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio">White
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio">Grey
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio">Blue
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio">Red
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio">Other
+                </label>
+              </form>
             </div>
 
-
-
           </div>
-
-          <div class="col-lg-6 background order-lg-2 order-1" data-aos="fade-left" data-aos-delay="100"></div>
         </div>
 
       </div>
@@ -192,29 +195,13 @@
     <section id="facts">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h3 class="section-title">Tool Insight</h3>
-          <p class="section-description">Why trust this estimate?</p>
+          <h3 class="section-title">Your vehicle values around:</h3>
+          <p class="section-description">in USD Currency</p>
         </div>
         <div class="row counters">
 
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">95</span>
-            <p>Tool Accuracy in Testing Data</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">521</span>
-            <p>Total Resale Car Posts Analyzed</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">1,463</span>
-            <p>Total Car Types</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">15</span>
-            <p>Blah</p>
+          <div class="col-lg-12 col-6 text-center">
+            <span data-toggle="counter-up" class="min-value">0</span> to <span data-toggle="counter-up" class="max-value">0</span>
           </div>
 
         </div>
@@ -227,7 +214,7 @@
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h3 class="section-title">Background</h3>
-          <p class="section-description">What is this tool built on?</p>
+          <p class="section-description">Learn more about this tool:</p>
         </div>
         <div class="row">
           <div class="col-lg-4 col-md-6" data-aos="zoom-in">
@@ -247,12 +234,12 @@
           <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="box">
               <div class="icon"><a href=""><i class="fa fa-paper-plane"></i></a></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <h4 class="title"><a href="">Accuracy</a></h4>
+              <p class="description">The model showed xx% accuracy</p>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+          <!-- <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="box">
               <div class="icon"><a href=""><i class="fa fa-photo"></i></a></div>
               <h4 class="title"><a href="">Magni Dolores</a></h4>
@@ -272,7 +259,7 @@
               <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
               <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
             </div>
-          </div>
+          </div> -->
         </div>
 
       </div>
@@ -284,10 +271,10 @@
         <div class="row" data-aos="zoom-in">
           <div class="col-lg-9 text-center text-lg-left">
             <h3 class="cta-title">Call To Action</h3>
-            <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class="cta-text"> Ready to sell? Go ahead, post it onto the marketplace</p>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Call To Action</a>
+            <a class="cta-btn align-middle" href="https://www.kijiji.ca/">Kijiji.ca</a>
           </div>
         </div>
 
@@ -295,14 +282,14 @@
     </section><!-- End Call To Action Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-      <div class="container" data-aos="fade-up">
+    <!-- <section id="portfolio" class="portfolio"> -->
+      <!-- <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h3 class="section-title">Portfolio</h3>
-          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-        </div>
+          <h3 class="section-title">The Team</h3>
+          <p class="section-description">a team of highly diversified mates</p>
+        </div> -->
 
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <!-- <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
@@ -311,9 +298,9 @@
               <li data-filter=".filter-web">Web</li>
             </ul>
           </div>
-        </div>
+        </div> -->
 
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+        <!-- <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
@@ -355,67 +342,17 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
         </div>
 
       </div>
-    </section><!-- End Portfolio Section -->
+    </section>End Portfolio Section -->
 
     <!-- ======= Team Section ======= -->
     <section id="team">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h3 class="section-title">Team</h3>
-          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+          <p class="section-description">Meet the team that put all this together!</p>
         </div>
         <div class="row">
           <div class="col-lg-3 col-md-6">
@@ -479,16 +416,16 @@
     </section><!-- End Team Section -->
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact">
+    <!-- <section id="contact">
       <div class="container">
         <div class="section-header">
           <h3 class="section-title">Contact</h3>
           <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
         </div>
-      </div>
+      </div> -->
 
       <!-- Uncomment below if you wan to use dynamic maps -->
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
 
       <div class="container mt-5">
         <div class="row justify-content-center">
@@ -554,7 +491,7 @@
         </div>
 
       </div>
-    </section><!-- End Contact Section -->
+    </section>End Contact Section -->
 
   </main><!-- End #main -->
 
