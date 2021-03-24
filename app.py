@@ -32,8 +32,9 @@ def api():
 
 # Route for posting user inqueries
 @app.route("/api/priceInquery", methods=["POST", "GET"])
+
 def priceInquery():
-    print(request.get_json())
+
     # Obtain the request parameters
     print(request.form)
     #vehicleType = request.form["vehicleType"]
@@ -58,17 +59,11 @@ def priceInquery():
     #    ])
     #)
 
-    # result = prediction[0] 
-    # return jsonify(result)
+    prediction = [100,400]
 
-@app.route('/signup', methods = ['POST'])
-def signup():
-    email = request.form['email']
-    print("The email address is '" + email + "'")
-    return redirect('/')
-
-
-
+    return(
+        render_template("index.html", _anchor="facts", prediction = prediction)
+    )
 
 
 if __name__ == "__main__":

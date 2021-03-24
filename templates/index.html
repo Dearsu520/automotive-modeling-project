@@ -92,26 +92,57 @@
       <div class="container" data-aos="fade-up">
         <div class="row about-container">
 
-          <div class="col-lg-12 content order-lg-1 order-2">
+          <div class="col-lg-2 content order-lg-1 order-2">
+            <div class="icon"><i class="fa fa-road"></i></div>
+            <br>
+            <div class="icon"><i class="fa fa-automobile"></i></div>
+            <br>
+            <div class="icon"><i class="fa fa-road"></i></div>
+            <br>
+            <div class="icon"><i class="fa fa-truck"></i></div>
+            <br>
+            <div class="icon"><i class="fa fa-road"></i></div>
+            <br>
+            <div class="icon"><i class="fa fa-automobile"></i></div>
+            <br>
+            <div class="icon"><i class="fa fa-road"></i></div>
+            <br>
+            <div class="icon"><i class="fa fa-motorcycle"></i></div>
+            <br>
+            <div class="icon"><i class="fa fa-road"></i></div>
+            <br>
+            <div class="icon"><i class="fa fa-automobile"></i></div>
+            <br>
+            <div class="icon"><i class="fa fa-road"></i></div>
+            <br>
+            <div class="icon"><i class="fa fa-truck"></i></div>
+            <br>
+            <div class="icon"><i class="fa fa-road"></i></div>
+            <br>
+            <div class="icon"><i class="fa fa-road"></i></div>
+            <br>
+            <div class="icon"><i class="fa fa-automobile"></i></div>
+            <br>
+            <div class="icon"><i class="fa fa-road"></i></div>
+            <br>
+            <div class="icon"><i class="fa fa-motorcycle"></i></div>
+                       
+          </div>
+
+          <div class="col-lg-10 content order-lg-1 order-2">
+
             <h2 class="title">Tell us about your car</h2>
-            <!-- <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p> -->
-
+            
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-
-              <div class="icon"><i class="fa fa-automobile"></i></div>
 
               <form action="/api/priceInquery" method="post">
 
                 <h4 class="title"><a href="">What type of vehicle do you have?</a></h4>
 
-                <select class="form-select first" aria-label="Default select example" name="vehicleType">
+                <select class="form-select" aria-label="Default select example" name="vehicleType">
                   <option selected disabled>--Select Vehicle Type--</option>
                   <option value="type1">Car Type</option>
                 </select>
-
-                <h4 class="title"><a href="">Let's set up a profile:</a></h4>
 
                 <h3 class="subtitle">Manufacturer Name?</h3>
 
@@ -124,6 +155,10 @@
                 
                 <input type="number" name="year" class="number-input" min="1000" max="2021"></input>
                 
+                <h3 class="subtitle">Number of Cylinders?</h3>
+                
+                <input type="number" name="cylinders" class="number-input" min="1" max="20"></input>
+
                 <h3 class="subtitle">Fuel Type?</h3>
                 
                 <select class="form-select" aria-label="Default select example" name="fuelType">
@@ -131,62 +166,79 @@
                   <option value="diesel">Diesel</option>
                   <option value="petrol">Petrol/Gas</option>
                   <option value="hybrid">Hybrid</option>
-                  <option value="electri">Electric</option>
+                  <option value="electric">Electric</option>
                 </select>
 
-                <h4 class="title"><a href="">Current odometer reading? e.g. 100000</a></h4>
+                <h3 class="subtitle">Current odometer reading? e.g. 100000</h3>
 
-                <input type="number" name="odometer" class="number-input" style="margin-left: 40px;"></input>
+                <input type="number" name="odometer" class="number-input"></input>
 
-                <h4 class="title"><a href="">Just a few more details, </a></h4>
+                <h3 class="subtitle">Transmission Type?</h3>
+                
+                <select class="form-select" aria-label="Default select example" name="transmission">
+                  <option selected disabled>--Select Transmission Type--</option>
+                  <option value="automatic">Automatic</option>
+                  <option value="manual">Manual</option>
+                  <option value="other">Other</option>
+                </select>
+
+                <h3 class="subtitle">Drive Type?</h3>
+                
+                <select class="form-select" aria-label="Default select example" name="drive">
+                  <option selected disabled>--Select Drive Type--</option>
+                  <option value="rwd">Read-Wheel Drive</option>
+                  <option value="4wd">Four-Wheel Drive</option>
+                  <option value="fwd">Front-Wheel Drive</option>
+                  <option value="other">Other</option>
+                </select>
               
                 <h3 class="subtitle">What condition is the vehicle in?</h3>
 
-                <!-- <label class="radio-inline">
-                  <input type="radio" name="optradio">Don't want to say</input>
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="optradio">Good</input>
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="optradio">Excellent</input>
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="optradio">Like New</input>
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="optradio">New</input>
-                </label>
+                <input type="radio" name="carCondition" value="other">
+                <label for="other">Don't want to say</label>
+                <input type="radio" name="carCondition" value="salvage">
+                <label for="salvage">Salvage</label>
+                <input type="radio" name="carCondition" value="fair">
+                <label for="fair">Fair</label>
+                <input type="radio" name="carCondition" value="good">
+                <label for="good">Good</label>
+                <input type="radio" name="carCondition" value="excellent">
+                <label for="excellent">Excellent</label>
+                <input type="radio" name="carCondition" value="likenew">
+                <label for="likenew">Like New</label>
+                <input type="radio" name="carCondition" value="new">
+                <label for="new">New</label>
+                
 
                 <h3 class="subtitle">Paint colour?</h3>
 
-                <label class="radio-inline">
-                  <input type="radio" name="optradio">Black</input>
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="optradio">White</input>
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="optradio">Grey</input>
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="optradio">Blue</input>
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="optradio">Red</input>
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="optradio">Other</input>
-                </label> -->
-
+                <input type="radio" name="paintColour" value="blue">
+                <label for="other">Blue</label>
+                <input type="radio" name="paintColour" value="red">
+                <label for="other">Red</label>
+                <input type="radio" name="paintColour" value="white">
+                <label for="other">White</label>
+                <input type="radio" name="paintColour" value="orange">
+                <label for="other">Orange</label>
+                <input type="radio" name="paintColour" value="black">
+                <label for="other">Black</label>
+                <input type="radio" name="paintColour" value="silver">
+                <label for="other">Silver</label>
+                <input type="radio" name="paintColour" value="grey">
+                <label for="other">Grey</label>
+                <input type="radio" name="paintColour" value="brown">
+                <label for="other">Brown</label>
+                <input type="radio" name="paintColour" value="green">
+                <label for="other">Green</label>
+                <input type="radio" name="paintColour" value="yellow">
+                <label for="other">Yellow</label>
+                <input type="radio" name="paintColour" value="purple">
+                <label for="other">Purple</label>
+                <input type="radio" name="paintColour" value="custom">
+                <label for="other">Custom</label>
+                <br>
+                <br>
                 <button type="submit"> Get my price! </button>
-
-              </form>
-
-
-              <form action="/signup" method="post">
-                <input type="text" name="email"></input>
-                <input type="submit" value="Signup"></input>
 
               </form>
 
@@ -209,7 +261,11 @@
         <div class="row counters">
 
           <div class="col-lg-12 col-6 text-center">
-            <span data-toggle="counter-up" class="min-value">1000</span> to <span data-toggle="counter-up" class="max-value">4000</span>
+            {% if prediction : %}
+            <span data-toggle="counter-up" class="min-value"> {{prediction[0]}} </span> to <span data-toggle="counter-up" class="max-value"> {{prediction[1]}} </span>
+            {% else %}
+            <span data-toggle="counter-up" class="min-value">0</span> to <span data-toggle="counter-up" class="max-value">0</span>
+            {% endif %}
           </div>
 
         </div>
@@ -227,23 +283,23 @@
         <div class="row">
           <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="box">
-              <div class="icon"><a href=""><i class="fa fa-desktop"></i></a></div>
-              <h4 class="title"><a href="">Data Source</a></h4>
-              <p class="description">Data from Craiglist was scrapped every three months. All resale posts were from the United States.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
-            <div class="box">
               <div class="icon"><a href=""><i class="fa fa-bar-chart"></i></a></div>
-              <h4 class="title"><a href="">Machine Learning</a></h4>
-              <p class="description">With all the information, the RandomTreeRegressor was used to predict pricing ranges</p>
+              <h4 class="title"><a href="">Data Source</a></h4>
+              <p class="description">With the largest online collection of used vehicles for sale, Craiglist was webscrapped every few months. All information relevant to price was collected. Only posts from the United States was included.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="box">
-              <div class="icon"><a href=""><i class="fa fa-paper-plane"></i></a></div>
+              <div class="icon"><a href=""><i class="fa fa-bug"></i></a></div>
+              <h4 class="title"><a href="">Machine Learning</a></h4>
+              <p class="description">The RandomForestRegressor is behind this predictor. Features were selected to ensure reliable predictions, while minimized to maintain efficiency. A total of # features are considered.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><a href=""><i class="fa fa-rocket"></i></a></div>
               <h4 class="title"><a href="">Accuracy</a></h4>
-              <p class="description">The model showed xx% accuracy</p>
+              <p class="description">In the training phase, the model showed an accuracy of XX%, while in its testing period, an accuracy of XX% was achieved.</p>
             </div>
           </div>
 
@@ -282,7 +338,7 @@
             <p class="cta-text"> Ready to sell? Go ahead, post it onto the marketplace</p>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="https://www.kijiji.ca/">Kijiji.ca</a>
+            <a class="cta-btn align-middle" href="https://www.kijiji.ca/" target="_blank">Kijiji.ca</a>
           </div>
         </div>
 
@@ -366,12 +422,10 @@
           <div class="col-lg-3 col-md-6">
             <div class="member" data-aos="fade-up" data-aos-delay="100">
               <div class="pic"><img src="../static/img/team-1.jpg" alt=""></div>
-              <h4>Walter White</h4>
-              <span>Chief Executive Officer</span>
+              <h4>Kelvin Deng</h4>
+              <span>Bootcamper</span>
               <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href="https://github.com/kk-deng"><i class="fa fa-github"></i></a>
                 <a href=""><i class="fa fa-linkedin"></i></a>
               </div>
             </div>
@@ -380,12 +434,10 @@
           <div class="col-lg-3 col-md-6">
             <div class="member" data-aos="fade-up" data-aos-delay="200">
               <div class="pic"><img src="../static/img/team-2.jpg" alt=""></div>
-              <h4>Sarah Jhinson</h4>
-              <span>Product Manager</span>
+              <h4>May Ang</h4>
+              <span>Bootcamper</span>
               <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-github"></i></a>
                 <a href=""><i class="fa fa-linkedin"></i></a>
               </div>
             </div>
@@ -394,12 +446,10 @@
           <div class="col-lg-3 col-md-6">
             <div class="member" data-aos="fade-up" data-aos-delay="300">
               <div class="pic"><img src="../static/img/team-3.jpg" alt=""></div>
-              <h4>William Anderson</h4>
-              <span>CTO</span>
+              <h4>Yijing Su</h4>
+              <span>Bootcamper</span>
               <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href="https://github.com/Dearsu520"><i class="fa fa-github"></i></a>
                 <a href=""><i class="fa fa-linkedin"></i></a>
               </div>
             </div>
@@ -408,12 +458,10 @@
           <div class="col-lg-3 col-md-6">
             <div class="member" data-aos="fade-up" data-aos-delay="400">
               <div class="pic"><img src="../static/img/team-4.jpg" alt=""></div>
-              <h4>Amanda Jepson</h4>
-              <span>Accountant</span>
+              <h4>Thao Hoang</h4>
+              <span>Bootcamper</span>
               <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href="https://github.com/Navyhoang"><i class="fa fa-github"></i></a>
                 <a href=""><i class="fa fa-linkedin"></i></a>
               </div>
             </div>
