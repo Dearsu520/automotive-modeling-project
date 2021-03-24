@@ -11,7 +11,7 @@ import numpy as np
 app = Flask(__name__)
 
 # Load the machine learning model TODO finalize the pickle file name
-model = pickle.load(open('model.pkl','rb')) 
+#model = pickle.load(open('model.pkl','rb')) 
 
 # Route to the landing page
 @app.route("/")
@@ -40,20 +40,23 @@ def priceInquery():
     condition = request.form["condition"]
     paintColor = request.form["paintColor"]
 
+    print("priceInquery is being read okay")
+    print(vehicleType, year, odometer, fuelType)
+    
     # Obtain prediction from the model
-    prediction = model.predict(
-        np.array([
-            vehicleType,
-            year,
-            odometer,
-            fuelType,
-            condition,
-            paintColor
-        ])
-    )
+    #prediction = model.predict(
+    #    np.array([
+    #        vehicleType,
+    #        year,
+    #        odometer,
+    #        fuelType,
+    #        condition,
+    #        paintColor
+    #    ])
+    #)
 
-    result = prediction[0] ## TODO should I do it like this?
-    return jsonify(result)
+    # result = prediction[0] ## TODO should I do it like this?
+    # return jsonify(result)
 
 if __name__ == "__main__":
     app.run(debug=True)
