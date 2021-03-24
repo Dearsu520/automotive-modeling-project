@@ -103,9 +103,12 @@
               <div class="icon"><i class="fa fa-automobile"></i></div>
               <h4 class="title"><a href="">What type of vehicle do you have?</a></h4>
 
-              <select class="form-select first" aria-label="Default select example">
-                <option selected>Car Type</option>
-              </select>
+              <form action="/action_page.php">
+                <select class="form-select first" aria-label="Default select example" name="vehicleType">
+                  <option selected disabled>--Select Vehicle Type--</option>
+                  <option value="type1">Car Type</option>
+                </select>
+              </form>
 
             </div>
 
@@ -114,29 +117,42 @@
               <div class="icon"><i class="fa fa-gears"></i></div>
               <h4 class="title"><a href="">Let's set up a profile:</a></h4>
 
-              <h3 class="subtitle">Manufacturer and Model type?</h3>
+              <h3 class="subtitle">Manufacturer Name?</h3>
 
-              <select class="form-select" aria-label="Default select example">
-                <option selected>Manufacturer/Model</option>
-              </select>
+              <form action="/action_page.php">
+                <select class="form-select" aria-label="Default select example" name="carManufacturer">
+                  <option selected disabled>--Select Manufacturer--</option>
+                  <option value="Manufacturer">Manufacturer</option>
+                </select>               
+              </form>
 
               <h3 class="subtitle">Year of make?</h3>
-              <input type="number" id="tentacles" name="tentacles" class="number-input" min="1000" max="2021">
+              
+              <form action="/action_page.php">
+                <input type="number" id="tentacles" name="year" class="number-input" min="1000" max="2021">
+              </form>
 
               <h3 class="subtitle">Fuel Type?</h3>
-              <select class="form-select" aria-label="Default select example">
-                <option selected>Diesel</option>
-                <option value="1">Petrol/Gas</option>
-                <option value="2">Hybrid</option>
-                <option value="3">Electric</option>
-              </select>
+
+              <form action="/action_page.php">
+                <select class="form-select" aria-label="Default select example" name="fuelType">
+                  <option selected disabled>--Select Fuel Type--</option>
+                  <option value="diesel">Diesel</option>
+                  <option value="petrol">Petrol/Gas</option>
+                  <option value="hybrid">Hybrid</option>
+                  <option value="electri">Electric</option>
+                </select>
+              </form>
 
             </div>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
               <div class="icon"><i class="fa fa-dashboard"></i></div>
               <h4 class="title"><a href="">Current odometer reading? e.g. 100000</a></h4>
-              <input type="number" id="tentacles" name="tentacles" class="number-input" style="margin-left: 40px;">
+
+              <form method="post" action="simpleform.asp">
+                <input type="number" id="tentacles" name="odometer" class="number-input" style="margin-left: 40px;">
+              </form>
             </div>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
@@ -201,7 +217,7 @@
         <div class="row counters">
 
           <div class="col-lg-12 col-6 text-center">
-            <span data-toggle="counter-up" class="min-value">0</span> to <span data-toggle="counter-up" class="max-value">0</span>
+            <span data-toggle="counter-up" class="min-value">1000</span> to <span data-toggle="counter-up" class="max-value">4000</span>
           </div>
 
         </div>
