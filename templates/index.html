@@ -79,9 +79,15 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+      {% if prediction : %}
+      <h1>Done!</h1>
+      <a href="#facts" class="btn btn-warning">Click here to get your estimate!!</a>
+      {% else %}
       <h1>Welcome to Price Your Car!</h1>
       <h2>A tool to estimate its market value</h2>
       <a href="#about" class="btn-get-started">Let's get started</a>
+      {% endif %}
+
     </div>
   </section><!-- End Hero Section -->
 
