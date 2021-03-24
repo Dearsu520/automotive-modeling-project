@@ -35,7 +35,7 @@ def priceInquery():
     # Obtain the request parameters
     vehicleType = request.form["vehicleType"]
     year = request.form["year"]
-    model = request.form["model"]
+    odometer = request.form["odometer"]
     fuelType = request.form["fuelType"]
     condition = request.form["condition"]
     paintColor = request.form["paintColor"]
@@ -45,7 +45,7 @@ def priceInquery():
         np.array([
             vehicleType,
             year,
-            model,
+            odometer,
             fuelType,
             condition,
             paintColor
