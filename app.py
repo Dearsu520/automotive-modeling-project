@@ -29,19 +29,22 @@ def api():
     "<li><p3>/api/priceInquery: Route to send and receive inqueries and results</p3></li>"
     "</ul>")
 
-# Route for posting user inqueries
-@app.route("/api/priceInquery", methods=["POST"])
-def priceInquery():
-    # Obtain the request parameters
-    vehicleType = request.form["vehicleType"]
-    year = request.form["year"]
-    odometer = request.form["odometer"]
-    fuelType = request.form["fuelType"]
-    condition = request.form["condition"]
-    paintColor = request.form["paintColor"]
 
-    print("priceInquery is being read okay")
-    print(vehicleType, year, odometer, fuelType)
+# Route for posting user inqueries
+@app.route("/api/priceInquery", methods=["POST", "GET"])
+def priceInquery():
+    print(request.get_json())
+    # Obtain the request parameters
+    print(request.form)
+    #vehicleType = request.form["vehicleType"]
+    # year = request.form["year"]
+    # odometer = request.form["odometer"]
+    # fuelType = request.form["fuelType"]
+    # condition = request.form["condition"]
+    # paintColor = request.form["paintColor"]
+
+    # print("priceInquery is being read okay")
+    # print(vehicleType, year, odometer, fuelType, condition, paintColor)
     
     # Obtain prediction from the model
     #prediction = model.predict(
@@ -55,8 +58,18 @@ def priceInquery():
     #    ])
     #)
 
-    # result = prediction[0] ## TODO should I do it like this?
+    # result = prediction[0] 
     # return jsonify(result)
+
+@app.route('/signup', methods = ['POST'])
+def signup():
+    email = request.form['email']
+    print("The email address is '" + email + "'")
+    return redirect('/')
+
+
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
