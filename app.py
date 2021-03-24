@@ -63,6 +63,7 @@ def priceInquery():
 
     return(
         render_template("index.html", _anchor="facts", prediction = prediction)
+        #redirect(url_for('facts', prediction = prediction))
     )
 
 

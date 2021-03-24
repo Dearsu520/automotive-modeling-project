@@ -22,6 +22,7 @@
   <link href="../static/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="../static/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="../static/vendor/aos/aos.css" rel="stylesheet">
+  <script src="https://d3js.org/d3.v6.min.js"></script>
 
   <!-- Template Main CSS File -->
   <link href="../static/css/style.css" rel="stylesheet">
@@ -50,7 +51,6 @@
         <ul class="nav-menu">
           <li class="menu-active"><a href="index.html">Home</a></li>
           <li><a href="#about">Pricer</a></li>
-          <li><a href="#services">Insight</a></li>
           <li><a href="#portfolio">Background</a></li>
           <li><a href="#team">Team</a></li>
           <!-- <li class="menu-has-children"><a href="">Drop Down</a>
@@ -139,16 +139,14 @@
 
                 <h4 class="title"><a href="">What type of vehicle do you have?</a></h4>
 
-                <select class="form-select" aria-label="Default select example" name="vehicleType">
+                <select class="form-select vehicleType" aria-label="Default select example" name="vehicleType">
                   <option selected disabled>--Select Vehicle Type--</option>
-                  <option value="type1">Car Type</option>
                 </select>
 
                 <h3 class="subtitle">Manufacturer Name?</h3>
 
-                <select class="form-select" aria-label="Default select example" name="carManufacturer">
+                <select class="form-select carManufacturer" aria-label="Default select example" name="carManufacturer">
                   <option selected disabled>--Select Manufacturer--</option>
-                  <option value="Manufacturer">Manufacturer</option>
                 </select>      
 
                 <h3 class="subtitle">Year of make?</h3>
@@ -161,12 +159,8 @@
 
                 <h3 class="subtitle">Fuel Type?</h3>
                 
-                <select class="form-select" aria-label="Default select example" name="fuelType">
+                <select class="form-select fuelType" aria-label="Default select example" name="fuelType">
                   <option selected disabled>--Select Fuel Type--</option>
-                  <option value="diesel">Diesel</option>
-                  <option value="petrol">Petrol/Gas</option>
-                  <option value="hybrid">Hybrid</option>
-                  <option value="electric">Electric</option>
                 </select>
 
                 <h3 class="subtitle">Current odometer reading? e.g. 100000</h3>
@@ -175,21 +169,14 @@
 
                 <h3 class="subtitle">Transmission Type?</h3>
                 
-                <select class="form-select" aria-label="Default select example" name="transmission">
+                <select class="form-select transmission" aria-label="Default select example" name="transmission">
                   <option selected disabled>--Select Transmission Type--</option>
-                  <option value="automatic">Automatic</option>
-                  <option value="manual">Manual</option>
-                  <option value="other">Other</option>
                 </select>
 
                 <h3 class="subtitle">Drive Type?</h3>
                 
-                <select class="form-select" aria-label="Default select example" name="drive">
+                <select class="form-select drive" aria-label="Default select example" name="drive">
                   <option selected disabled>--Select Drive Type--</option>
-                  <option value="rwd">Read-Wheel Drive</option>
-                  <option value="4wd">Four-Wheel Drive</option>
-                  <option value="fwd">Front-Wheel Drive</option>
-                  <option value="other">Other</option>
                 </select>
               
                 <h3 class="subtitle">What condition is the vehicle in?</h3>
@@ -252,7 +239,7 @@
     </section><!-- End About Section -->
 
     <!-- ======= Facts Section ======= -->
-    <section id="facts">
+    <section id="facts" name="facts">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h3 class="section-title">Your vehicle values around:</h3>
@@ -593,6 +580,7 @@
 
   <!-- Template Main JS File -->
   <script src="../static/js/main.js"></script>
+  <script src="../static/js/setup.js"></script>
 
 </body>
 
