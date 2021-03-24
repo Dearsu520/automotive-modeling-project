@@ -102,7 +102,7 @@
 
               <div class="icon"><i class="fa fa-automobile"></i></div>
 
-              <!-- <form action="/api/priceInquery">
+              <form action="/api/priceInquery" method="post">
 
                 <h4 class="title"><a href="">What type of vehicle do you have?</a></h4>
 
@@ -122,7 +122,7 @@
 
                 <h3 class="subtitle">Year of make?</h3>
                 
-                <input type="number" id="tentacles" name="year" class="number-input" min="1000" max="2021"></input>
+                <input type="number" name="year" class="number-input" min="1000" max="2021"></input>
                 
                 <h3 class="subtitle">Fuel Type?</h3>
                 
@@ -136,13 +136,13 @@
 
                 <h4 class="title"><a href="">Current odometer reading? e.g. 100000</a></h4>
 
-                <input type="number" id="tentacles" name="odometer" class="number-input" style="margin-left: 40px;"></input>
+                <input type="number" name="odometer" class="number-input" style="margin-left: 40px;"></input>
 
                 <h4 class="title"><a href="">Just a few more details, </a></h4>
               
                 <h3 class="subtitle">What condition is the vehicle in?</h3>
 
-                <label class="radio-inline">
+                <!-- <label class="radio-inline">
                   <input type="radio" name="optradio">Don't want to say</input>
                 </label>
                 <label class="radio-inline">
@@ -177,14 +177,17 @@
                 </label>
                 <label class="radio-inline">
                   <input type="radio" name="optradio">Other</input>
-                </label>
+                </label> -->
 
                 <button type="submit"> Get my price! </button>
 
-              </form> -->
+              </form>
+
+
               <form action="/signup" method="post">
                 <input type="text" name="email"></input>
                 <input type="submit" value="Signup"></input>
+
               </form>
 
             </div>
