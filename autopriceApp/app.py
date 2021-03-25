@@ -38,30 +38,35 @@ def api():
 @app.route("/api/priceInquery", methods=["POST", "GET"])
 
 def priceInquery():
+    # Get the column names
+    column_names = ['manufacturer','year', 'condition', 'cylinders', 'fuel', 'odometer', 'transmission','drive', 'type', 'paint_color']
+    
+    try:
+        # Obtain the request parameters
+        print(request.form["vehicleType"])
+        vehicleType = request.form["vehicleType"] or "truck"
+        manufacturer = request.form["carManufacturer"] or "honda" 
+        year = request.form["year"] or "2006"
+        cylinders = request.form["cylinders"] or "6"
+        fuelType = request.form["fuelType"] or "gas"
+        odometer = request.form["odometer"] or "30000"
+        transmission = request.form["transmission"] or "automatic"
+        drive = request.form["drive"] or "rwd"
+        condition = request.form["carCondition"] or "good"
+        paintColour = request.form["paintColour"] or "red"
 
-    # Obtain the request parameters
-    print(request.form)
-    vehicleType = request.form["vehicleType"]
-    manufacturer = request.form["carManufacturer"]
-    year = request.form["year"]
-    cylinders = request.form["cylinders"]
-    fuelType = request.form["fuelType"]
-    odometer = request.form["odometer"]
-    transmission = request.form["transmission"]
-    drive = request.form["drive"]
-    condition = request.form["carCondition"]
-    paintColour = request.form["paintColour"]
+        input_data = [manufacturer, year, condition, cylinders, fuelType, odometer, transmission, drive, vehicleType, paintColour]
 
-    input_data = [manufacturer, year, condition, cylinders, fuelType, odometer, transmission, drive, vehicleType, paintColour]
+        print(input_data)
+        # Obtain prediction from the model
+        input_df = pd.DataFrame(columns=column_names, data=np.array(input_data).reshape(1,10))
+                            #   data=np.array(['honda', '2006', 'good', '6', 'gas', '30000', 'automatic','rwd', 'truck', 'red']).reshape(1,10))
 
-    print(input_data)
-    # Obtain prediction from the model
-
-    input_df = pd.DataFrame(columns=['manufacturer','year', 'condition', 'cylinders', 'fuel', 'odometer', 'transmission','drive', 'type', 'paint_color'],
-                          data=np.array(input_data).reshape(1,10))
-                        #   data=np.array(['honda', '2006', 'good', '6', 'gas', '30000', 'automatic','rwd', 'truck', 'red']).reshape(1,10))
-
-    prediction = model.predict(input_df)[0]
+        prediction = model.predict(input_df)[0]
+    except:
+        input_data = ['NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA','NA', 'NA', 'NA']
+        # If some of the values are not provided, return 0
+        prediction = 0
 
     # round prediction value to obtain price range 
     def roundup(x):
@@ -79,7 +84,7 @@ def priceInquery():
     print(prediction_range)
 
     return(
-        render_template("index.html", prediction = prediction_range)
+        render_template("index.html", prediction = prediction_range, columns = column_names, info = input_data)
     )
 
 
