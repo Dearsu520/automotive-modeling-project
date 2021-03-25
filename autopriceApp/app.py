@@ -14,7 +14,7 @@ import pandas as pd
 app = Flask(__name__)
 
 # Load the model
-f = gzip.open('ETL/new_car_prediction_compressed.pkl','rb')
+f = gzip.open('autopriceApp/model/new_car_prediction_compressed.pkl','rb')
 model = pickle.load(f)
 
 # Route to the landing page
