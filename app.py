@@ -5,6 +5,7 @@ from flask import (
     request,
     redirect)
 import pickle
+import gzip
 import numpy as np
 import math 
 
@@ -12,7 +13,7 @@ import math
 app = Flask(__name__)
 
 # Load the model
-f = gzip.open('ETL\new_car_prediction_compressed.pkl','rb')
+f = gzip.open('ETL/new_car_prediction_compressed.pkl','rb')
 model = pickle.load(f)
 
 # Route to the landing page
@@ -40,27 +41,31 @@ def priceInquery():
     # Obtain the request parameters
     print(request.form)
     vehicleType = request.form["vehicleType"]
+    manufacturer = request.form["carManufacturer"]
     year = request.form["year"]
-    odometer = request.form["odometer"]
+    cylinders = request.form["cylinders"]
     fuelType = request.form["fuelType"]
-    condition = request.form["condition"]
-    paintColor = request.form["paintColor"]
+    odometer = request.form["odometer"]
+    transmission = request.form["transmission"]
+    drive = request.form["drive"]
+    condition = request.form["carCondition"]
+    paintColor = request.form["paintColour"]
 
    
     # Obtain prediction from the model
 
-    ['manufacturer','year', 'condition', 'cylinders', 'fuel', 'odometer', 'transmission','drive', 'type', 'paint_color']
+    # ['manufacturer','year', 'condition', 'cylinders', 'fuel', 'odometer', 'transmission','drive', 'type', 'paint_color']
 
-    prediction = model.predict(
-       np.array([
-           vehicleType,
-           year,
-           odometer,
-           fuelType,
-           condition,
-           paintColor
-       ])
-    )
+    # prediction = model.predict(
+    #    np.array([
+    #        vehicleType,
+    #        year,
+    #        odometer,
+    #        fuelType,
+    #        condition,
+    #        paintColor
+    #    ])
+    # )
 
  
 
