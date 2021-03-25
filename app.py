@@ -6,12 +6,14 @@ from flask import (
     redirect)
 import pickle
 import numpy as np
+import math 
 
 # Set up flask
 app = Flask(__name__)
 
-# Load the machine learning model TODO finalize the pickle file name
-#model = pickle.load(open('model.pkl','rb')) 
+# Load the model
+f = gzip.open('ETL\new_car_prediction_compressed.pkl','rb')
+model = pickle.load(f)
 
 # Route to the landing page
 @app.route("/")
@@ -37,27 +39,30 @@ def priceInquery():
 
     # Obtain the request parameters
     print(request.form)
-    # vehicleType = request.form["vehicleType"]
-    # year = request.form["year"]
-    # odometer = request.form["odometer"]
-    # fuelType = request.form["fuelType"]
-    # condition = request.form["condition"]
-    # paintColor = request.form["paintColor"]
+    vehicleType = request.form["vehicleType"]
+    year = request.form["year"]
+    odometer = request.form["odometer"]
+    fuelType = request.form["fuelType"]
+    condition = request.form["condition"]
+    paintColor = request.form["paintColor"]
 
    
     # Obtain prediction from the model
-    #prediction = model.predict(
-    #    np.array([
-    #        vehicleType,
-    #        year,
-    #        odometer,
-    #        fuelType,
-    #        condition,
-    #        paintColor
-    #    ])
-    #)
 
-    import math 
+    ['manufacturer','year', 'condition', 'cylinders', 'fuel', 'odometer', 'transmission','drive', 'type', 'paint_color']
+
+    prediction = model.predict(
+       np.array([
+           vehicleType,
+           year,
+           odometer,
+           fuelType,
+           condition,
+           paintColor
+       ])
+    )
+
+ 
 
     # round prediction value to obtain price range 
     def roundup(x):
