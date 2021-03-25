@@ -8,6 +8,7 @@ import pickle
 import gzip
 import numpy as np
 import math 
+import pandas as pd
 
 # Set up flask
 app = Flask(__name__)
@@ -49,25 +50,18 @@ def priceInquery():
     transmission = request.form["transmission"]
     drive = request.form["drive"]
     condition = request.form["carCondition"]
-    paintColor = request.form["paintColour"]
+    paintColour = request.form["paintColour"]
 
-   
+    input_data = [manufacturer, year, condition, cylinders, fuelType, odometer, transmission, drive, vehicleType, paintColour]
+
+    print(input_data)
     # Obtain prediction from the model
 
-    # ['manufacturer','year', 'condition', 'cylinders', 'fuel', 'odometer', 'transmission','drive', 'type', 'paint_color']
+    input_df = pd.DataFrame(columns=['manufacturer','year', 'condition', 'cylinders', 'fuel', 'odometer', 'transmission','drive', 'type', 'paint_color'],
+                        #   data=np.array(input_data).reshape(1,10))
+                          data=np.array(['honda', '2006', 'good', '6', 'gas', '30000', 'automatic','rwd', 'truck', 'red']).reshape(1,10))
 
-    # prediction = model.predict(
-    #    np.array([
-    #        vehicleType,
-    #        year,
-    #        odometer,
-    #        fuelType,
-    #        condition,
-    #        paintColor
-    #    ])
-    # )
-
- 
+    prediction = model.predict(input_df)[0]
 
     # round prediction value to obtain price range 
     def roundup(x):
@@ -76,7 +70,7 @@ def priceInquery():
     def rounddown(x):
         return int(math.floor(x/1000))*1000
 
-    prediction = 132321 #fake value for testing purpose
+    # prediction = prediction #fake value for testing purpose
     prediction_range = [0, 0] #placeholder for ranges
     prediction_range[0] = rounddown(prediction) 
     prediction_range[1] = roundup(prediction)
