@@ -37,16 +37,14 @@ def priceInquery():
 
     # Obtain the request parameters
     print(request.form)
-    #vehicleType = request.form["vehicleType"]
+    # vehicleType = request.form["vehicleType"]
     # year = request.form["year"]
     # odometer = request.form["odometer"]
     # fuelType = request.form["fuelType"]
     # condition = request.form["condition"]
     # paintColor = request.form["paintColor"]
 
-    # print("priceInquery is being read okay")
-    # print(vehicleType, year, odometer, fuelType, condition, paintColor)
-    
+   
     # Obtain prediction from the model
     #prediction = model.predict(
     #    np.array([
@@ -59,10 +57,22 @@ def priceInquery():
     #    ])
     #)
 
-    prediction = [100,400]
+    import math 
+
+    # round prediction value to obtain price range 
+    def roundup(x):
+        return int(math.ceil(x / 1000)) * 1000
+
+    def rounddown(x):
+        return int(math.floor(x/1000))*1000
+
+    prediction = 132321 #fake value for testing purpose
+    prediction_range = [0, 0] #placeholder for ranges
+    prediction_range[0] = rounddown(prediction) 
+    prediction_range[1] = roundup(prediction)
 
     return(
-        render_template("index.html", prediction = prediction)
+        render_template("index.html", prediction = prediction_range)
     )
 
 
