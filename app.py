@@ -58,8 +58,8 @@ def priceInquery():
     # Obtain prediction from the model
 
     input_df = pd.DataFrame(columns=['manufacturer','year', 'condition', 'cylinders', 'fuel', 'odometer', 'transmission','drive', 'type', 'paint_color'],
-                        #   data=np.array(input_data).reshape(1,10))
-                          data=np.array(['honda', '2006', 'good', '6', 'gas', '30000', 'automatic','rwd', 'truck', 'red']).reshape(1,10))
+                          data=np.array(input_data).reshape(1,10))
+                        #   data=np.array(['honda', '2006', 'good', '6', 'gas', '30000', 'automatic','rwd', 'truck', 'red']).reshape(1,10))
 
     prediction = model.predict(input_df)[0]
 
