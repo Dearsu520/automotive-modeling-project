@@ -75,6 +75,9 @@ def priceInquery():
     prediction_range[0] = rounddown(prediction) 
     prediction_range[1] = roundup(prediction)
 
+    print(prediction)
+    print(prediction_range)
+
     return(
         render_template("index.html", prediction = prediction_range)
     )
