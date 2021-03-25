@@ -187,8 +187,8 @@
               
                 <h3 class="subtitle">What condition is the vehicle in?</h3>
 
-                <input type="radio" name="carCondition" value="other">
-                <label for="other">Don't want to say</label>
+                <input type="radio" name="carCondition" value="not specified">
+                <label for="not specified">Don't want to say</label>
                 <input type="radio" name="carCondition" value="salvage">
                 <label for="salvage">Salvage</label>
                 <input type="radio" name="carCondition" value="fair">
@@ -197,7 +197,7 @@
                 <label for="good">Good</label>
                 <input type="radio" name="carCondition" value="excellent">
                 <label for="excellent">Excellent</label>
-                <input type="radio" name="carCondition" value="likenew">
+                <input type="radio" name="carCondition" value="like new">
                 <label for="likenew">Like New</label>
                 <input type="radio" name="carCondition" value="new">
                 <label for="new">New</label>
@@ -255,9 +255,9 @@
 
           <div class="col-lg-12 col-6 text-center">
             {% if prediction : %}
-            <span data-toggle="counter-up" class="min-value"> {{prediction[0]}} </span> to <span data-toggle="counter-up" class="max-value"> {{prediction[1]}} </span>
+            <span data-toggle="counter-up" class="min-value"> US$ {{prediction[0]}} </span> to <span data-toggle="counter-up" class="max-value"> US$ {{prediction[1]}} </span>
             {% else %}
-            <span data-toggle="counter-up" class="min-value">0</span> to <span data-toggle="counter-up" class="max-value">0</span>
+            <span data-toggle="counter-up" class="min-value"> US$ 0</span> to <span data-toggle="counter-up" class="max-value"> US$ 0</span>
             {% endif %}
           </div>
 
@@ -292,7 +292,7 @@
             <div class="box">
               <div class="icon"><a href=""><i class="fa fa-rocket"></i></a></div>
               <h4 class="title"><a href="">Accuracy</a></h4>
-              <p class="description">In the training phase, the model showed an accuracy of XX%, while in its testing period, an accuracy of XX% was achieved.</p>
+              <p class="description">In the training phase, the model showed an accuracy of %, while in its testing period, an accuracy of XX% was achieved.</p>
             </div>
           </div>
 
