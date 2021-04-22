@@ -1,0 +1,994 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20204.20.1106.0321                               -->
+<workbook source-build='2020.4.0 (20204.20.1106.0321)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <_.fcp.SetMembershipControl.true...SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='Visualization_16191188571140' path='/workbooks' revision='1.1' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='final_df_nonull' inline='true' name='federated.06vrzp81njresr11zd6rt0a94f0n' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='final_df_nonull' name='textscan.1lqyg0e1dari4x1c330s51un90co'>
+            <connection class='textscan' directory='C:/Users/ndeng/Desktop/GitHub/automotive-modeling-project/ETL' filename='final_df_nonull.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1lqyg0e1dari4x1c330s51un90co' name='final_df_nonull.csv' table='[final_df_nonull#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='integer' name='price' ordinal='1' />
+            <column datatype='string' name='manufacturer' ordinal='2' />
+            <column datatype='real' name='year' ordinal='3' />
+            <column datatype='string' name='condition' ordinal='4' />
+            <column datatype='real' name='cylinders' ordinal='5' />
+            <column datatype='string' name='fuel' ordinal='6' />
+            <column datatype='real' name='odometer' ordinal='7' />
+            <column datatype='string' name='transmission' ordinal='8' />
+            <column datatype='string' name='drive' ordinal='9' />
+            <column datatype='string' name='type' ordinal='10' />
+            <column datatype='string' name='paint_color' ordinal='11' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.1lqyg0e1dari4x1c330s51un90co' name='final_df_nonull.csv' table='[final_df_nonull#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='integer' name='price' ordinal='1' />
+            <column datatype='string' name='manufacturer' ordinal='2' />
+            <column datatype='real' name='year' ordinal='3' />
+            <column datatype='string' name='condition' ordinal='4' />
+            <column datatype='real' name='cylinders' ordinal='5' />
+            <column datatype='string' name='fuel' ordinal='6' />
+            <column datatype='real' name='odometer' ordinal='7' />
+            <column datatype='string' name='transmission' ordinal='8' />
+            <column datatype='string' name='drive' ordinal='9' />
+            <column datatype='string' name='type' ordinal='10' />
+            <column datatype='string' name='paint_color' ordinal='11' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[final_df_nonull.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_CA&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[final_df_nonull.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_df_nonull.csv_5D9BB65EA8E84A5287AF138F82E33F3E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[price]</local-name>
+            <parent-name>[final_df_nonull.csv]</parent-name>
+            <remote-alias>price</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_df_nonull.csv_5D9BB65EA8E84A5287AF138F82E33F3E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>manufacturer</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[manufacturer]</local-name>
+            <parent-name>[final_df_nonull.csv]</parent-name>
+            <remote-alias>manufacturer</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_df_nonull.csv_5D9BB65EA8E84A5287AF138F82E33F3E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[final_df_nonull.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_df_nonull.csv_5D9BB65EA8E84A5287AF138F82E33F3E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>condition</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[condition]</local-name>
+            <parent-name>[final_df_nonull.csv]</parent-name>
+            <remote-alias>condition</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_df_nonull.csv_5D9BB65EA8E84A5287AF138F82E33F3E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cylinders</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cylinders]</local-name>
+            <parent-name>[final_df_nonull.csv]</parent-name>
+            <remote-alias>cylinders</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_df_nonull.csv_5D9BB65EA8E84A5287AF138F82E33F3E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fuel</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[fuel]</local-name>
+            <parent-name>[final_df_nonull.csv]</parent-name>
+            <remote-alias>fuel</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_df_nonull.csv_5D9BB65EA8E84A5287AF138F82E33F3E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>odometer</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[odometer]</local-name>
+            <parent-name>[final_df_nonull.csv]</parent-name>
+            <remote-alias>odometer</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_df_nonull.csv_5D9BB65EA8E84A5287AF138F82E33F3E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>transmission</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[transmission]</local-name>
+            <parent-name>[final_df_nonull.csv]</parent-name>
+            <remote-alias>transmission</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_df_nonull.csv_5D9BB65EA8E84A5287AF138F82E33F3E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>drive</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[drive]</local-name>
+            <parent-name>[final_df_nonull.csv]</parent-name>
+            <remote-alias>drive</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_df_nonull.csv_5D9BB65EA8E84A5287AF138F82E33F3E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[type]</local-name>
+            <parent-name>[final_df_nonull.csv]</parent-name>
+            <remote-alias>type</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_df_nonull.csv_5D9BB65EA8E84A5287AF138F82E33F3E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>paint_color</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[paint_color]</local-name>
+            <parent-name>[final_df_nonull.csv]</parent-name>
+            <remote-alias>paint_color</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_df_nonull.csv_5D9BB65EA8E84A5287AF138F82E33F3E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Count_Excellent' datatype='real' name='[Calculation_373235853945495554]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF [condition] = &apos;excellent&apos; THEN 1 END)/COUNT([condition])' />
+      </column>
+      <column datatype='integer' hidden='true' name='[F1]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='final_df_nonull.csv' datatype='table' name='[__tableau_internal_object_id__].[final_df_nonull.csv_5D9BB65EA8E84A5287AF138F82E33F3E]' role='measure' type='quantitative' />
+      <column caption='Condition' datatype='string' name='[condition]' role='dimension' type='nominal' />
+      <column caption='Cylinders' datatype='real' name='[cylinders]' role='measure' type='quantitative' />
+      <column caption='Drive' datatype='string' name='[drive]' role='dimension' type='nominal' />
+      <column caption='Fuel' datatype='string' name='[fuel]' role='dimension' type='nominal' />
+      <column caption='Manufacturer' datatype='string' name='[manufacturer]' role='dimension' type='nominal' />
+      <column caption='Odometer' datatype='real' name='[odometer]' role='measure' type='quantitative' />
+      <column caption='Paint Color' datatype='string' name='[paint_color]' role='dimension' type='nominal' />
+      <column caption='Price' datatype='integer' name='[price]' role='measure' type='quantitative' />
+      <column caption='Transmission' datatype='string' name='[transmission]' role='dimension' type='nominal' />
+      <column caption='Type' datatype='string' name='[type]' role='dimension' type='nominal' />
+      <column caption='Year' datatype='real' name='[year]' role='dimension' type='quantitative' />
+      <column-instance column='[condition]' derivation='None' name='[none:condition:nk]' pivot='key' type='nominal' />
+      <column-instance column='[manufacturer]' derivation='None' name='[none:manufacturer:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/ndeng/Desktop/GitHub/automotive-modeling-project/ETL/final_df_nonull.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>price</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[price]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>price</remote-alias>
+              <ordinal>0</ordinal>
+              <family>final_df_nonull.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5065</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>manufacturer</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[manufacturer]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>manufacturer</remote-alias>
+              <ordinal>1</ordinal>
+              <family>final_df_nonull.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>52</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>year</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>year</remote-alias>
+              <ordinal>2</ordinal>
+              <family>final_df_nonull.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>153</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>condition</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[condition]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>condition</remote-alias>
+              <ordinal>3</ordinal>
+              <family>final_df_nonull.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cylinders</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[cylinders]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cylinders</remote-alias>
+              <ordinal>4</ordinal>
+              <family>final_df_nonull.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fuel</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[fuel]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fuel</remote-alias>
+              <ordinal>5</ordinal>
+              <family>final_df_nonull.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>odometer</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[odometer]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>odometer</remote-alias>
+              <ordinal>6</ordinal>
+              <family>final_df_nonull.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>18927</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>transmission</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[transmission]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>transmission</remote-alias>
+              <ordinal>7</ordinal>
+              <family>final_df_nonull.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>drive</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[drive]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>drive</remote-alias>
+              <ordinal>8</ordinal>
+              <family>final_df_nonull.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>type</remote-alias>
+              <ordinal>9</ordinal>
+              <family>final_df_nonull.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>paint_color</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[paint_color]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>paint_color</remote-alias>
+              <ordinal>10</ordinal>
+              <family>final_df_nonull.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:manufacturer:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;hyundai&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;lexus&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;ferrari&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;saturn&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;toyota&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;chevrolet&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;chrysler&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;audi&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;mini&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;jeep&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;kia&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;bmw&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;volvo&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;subaru&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;tesla&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;infiniti&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;mercury&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;acura&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;porsche&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;harley-davidson&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;mitsubishi&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;gmc&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;honda&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;nissan&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;ram&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;alfa-romeo&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;lincoln&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;aston-martin&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;dodge&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;jaguar&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;volkswagen&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;mazda&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;mercedes-benz&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;cadillac&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;pontiac&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;datsun&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;rover&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;buick&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;land rover&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;fiat&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;ford&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:condition:nk]' palette='green_orange_cyan_yellow_10_0' type='palette'>
+            <map to='#3ca8bc'>
+              <bucket>&quot;new&quot;</bucket>
+            </map>
+            <map to='#4e9f50'>
+              <bucket>&quot;excellent&quot;</bucket>
+            </map>
+            <map to='#67737c'>
+              <bucket>&quot;salvage&quot;</bucket>
+            </map>
+            <map to='#87d180'>
+              <bucket>&quot;fair&quot;</bucket>
+            </map>
+            <map to='#d5d5d5'>
+              <bucket>&quot;not specified&quot;</bucket>
+            </map>
+            <map to='#ef8a0c'>
+              <bucket>&quot;good&quot;</bucket>
+            </map>
+            <map to='#fcc66d'>
+              <bucket>&quot;like new&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
+      </semantic-values>
+      <filter class='categorical' column='[none:manufacturer:nk]' filter-group='2'>
+        <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+          <groupfilter function='level-members' level='[none:manufacturer:nk]' />
+          <groupfilter function='member' level='[none:manufacturer:nk]' member='&quot;morgan&quot;' />
+        </groupfilter>
+      </filter>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='final_df_nonull.csv' id='final_df_nonull.csv_5D9BB65EA8E84A5287AF138F82E33F3E'>
+            <properties context=''>
+              <relation connection='textscan.1lqyg0e1dari4x1c330s51un90co' name='final_df_nonull.csv' table='[final_df_nonull#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='integer' name='price' ordinal='1' />
+                  <column datatype='string' name='manufacturer' ordinal='2' />
+                  <column datatype='real' name='year' ordinal='3' />
+                  <column datatype='string' name='condition' ordinal='4' />
+                  <column datatype='real' name='cylinders' ordinal='5' />
+                  <column datatype='string' name='fuel' ordinal='6' />
+                  <column datatype='real' name='odometer' ordinal='7' />
+                  <column datatype='string' name='transmission' ordinal='8' />
+                  <column datatype='string' name='drive' ordinal='9' />
+                  <column datatype='string' name='type' ordinal='10' />
+                  <column datatype='string' name='paint_color' ordinal='11' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <shared-views>
+    <shared-view name='federated.06vrzp81njresr11zd6rt0a94f0n'>
+      <datasources>
+        <datasource caption='final_df_nonull' name='federated.06vrzp81njresr11zd6rt0a94f0n' />
+      </datasources>
+      <datasource-dependencies datasource='federated.06vrzp81njresr11zd6rt0a94f0n'>
+        <column caption='Manufacturer' datatype='string' name='[manufacturer]' role='dimension' type='nominal' />
+        <column-instance column='[manufacturer]' derivation='None' name='[none:manufacturer:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.06vrzp81njresr11zd6rt0a94f0n].[none:manufacturer:nk]' context='true'>
+        <groupfilter function='level-members' level='[none:manufacturer:nk]' user:ui-enumeration='all' user:ui-exclude='true' user:ui-marker='enumerate' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <worksheets>
+    <worksheet name='Avg Resale Price'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='final_df_nonull' name='federated.06vrzp81njresr11zd6rt0a94f0n' />
+          </datasources>
+          <datasource-dependencies datasource='federated.06vrzp81njresr11zd6rt0a94f0n'>
+            <column-instance column='[price]' derivation='Avg' name='[avg:price:qk]' pivot='key' type='quantitative' />
+            <column caption='Manufacturer' datatype='string' name='[manufacturer]' role='dimension' type='nominal' />
+            <column-instance column='[manufacturer]' derivation='None' name='[none:manufacturer:nk]' pivot='key' type='nominal' />
+            <column caption='Price' datatype='integer' name='[price]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.06vrzp81njresr11zd6rt0a94f0n].[none:manufacturer:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='487' />
+            <format attr='height' value='130' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.06vrzp81njresr11zd6rt0a94f0n].[avg:price:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#606b76' fontname='Tableau Bold' fontsize='36'>USD$</run>
+                <run fontcolor='#606b76' fontsize='36'><![CDATA[ <[federated.06vrzp81njresr11zd6rt0a94f0n].[avg:price:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#499894' fontname='Tableau Bold' fontsize='16'>Avg Resale Price</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{2EA71725-1F5A-4600-91E0-2D693FB23E1C}' />
+    </worksheet>
+    <worksheet name='Manufacturer &amp; Price'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Distribution of Price by Manufacturers</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='final_df_nonull' name='federated.06vrzp81njresr11zd6rt0a94f0n' />
+          </datasources>
+          <datasource-dependencies datasource='federated.06vrzp81njresr11zd6rt0a94f0n'>
+            <column-instance column='[price]' derivation='Avg' name='[avg:price:qk]' pivot='key' type='quantitative' />
+            <column caption='Manufacturer' datatype='string' name='[manufacturer]' role='dimension' type='nominal' />
+            <column-instance column='[manufacturer]' derivation='None' name='[none:manufacturer:nk]' pivot='key' type='nominal' />
+            <column-instance column='[price]' derivation='None' name='[none:price:qk]' pivot='key' type='quantitative' />
+            <column caption='Price' datatype='integer' name='[price]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.06vrzp81njresr11zd6rt0a94f0n].[none:manufacturer:nk]' direction='ASC' using='[federated.06vrzp81njresr11zd6rt0a94f0n].[avg:price:qk]' />
+          <slices>
+            <column>[federated.06vrzp81njresr11zd6rt0a94f0n].[none:manufacturer:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.06vrzp81njresr11zd6rt0a94f0n].[none:price:qk]' field-type='quantitative' max='160000' min='-9315' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <lod column='[federated.06vrzp81njresr11zd6rt0a94f0n].[none:manufacturer:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.06vrzp81njresr11zd6rt0a94f0n].[none:price:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.06vrzp81njresr11zd6rt0a94f0n].[none:price:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.0099999997764825821' />
+                <format attr='mark-color' value='#499894' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.06vrzp81njresr11zd6rt0a94f0n].[none:price:qk]</rows>
+        <cols>[federated.06vrzp81njresr11zd6rt0a94f0n].[none:manufacturer:nk]</cols>
+      </table>
+      <simple-id uuid='{56376D58-C829-4AAD-95AD-CFDCF930BFC2}' />
+    </worksheet>
+    <worksheet name='Who takes good care of his car?'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='final_df_nonull' name='federated.06vrzp81njresr11zd6rt0a94f0n' />
+          </datasources>
+          <datasource-dependencies datasource='federated.06vrzp81njresr11zd6rt0a94f0n'>
+            <column caption='Count_Excellent' datatype='real' name='[Calculation_373235853945495554]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [condition] = &apos;excellent&apos; THEN 1 END)/COUNT([condition])' />
+            </column>
+            <column caption='Condition' datatype='string' name='[condition]' role='dimension' type='nominal' />
+            <column caption='Manufacturer' datatype='string' name='[manufacturer]' role='dimension' type='nominal' />
+            <column-instance column='[condition]' derivation='None' name='[none:condition:nk]' pivot='key' type='nominal' />
+            <column-instance column='[manufacturer]' derivation='None' name='[none:manufacturer:nk]' pivot='key' type='nominal' />
+            <column-instance column='[condition]' derivation='Count' name='[pcto:cnt:condition:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.06vrzp81njresr11zd6rt0a94f0n].[none:condition:nk]' ordering-type='Field' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Calculation_373235853945495554]' derivation='User' name='[usr:Calculation_373235853945495554:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.06vrzp81njresr11zd6rt0a94f0n].[none:manufacturer:nk]' direction='DESC' using='[federated.06vrzp81njresr11zd6rt0a94f0n].[usr:Calculation_373235853945495554:qk]' />
+          <slices>
+            <column>[federated.06vrzp81njresr11zd6rt0a94f0n].[none:manufacturer:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.06vrzp81njresr11zd6rt0a94f0n].[pcto:cnt:condition:qk:2]' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.06vrzp81njresr11zd6rt0a94f0n].[none:condition:nk]' />
+              <text column='[federated.06vrzp81njresr11zd6rt0a94f0n].[pcto:cnt:condition:qk:2]' />
+              <lod column='[federated.06vrzp81njresr11zd6rt0a94f0n].[none:manufacturer:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-transparency' value='206' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.06vrzp81njresr11zd6rt0a94f0n].[pcto:cnt:condition:qk:2]</rows>
+        <cols>[federated.06vrzp81njresr11zd6rt0a94f0n].[none:manufacturer:nk]</cols>
+      </table>
+      <simple-id uuid='{B99D99DF-7D95-47BC-8AA6-551ABD9E1FC2}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Craigslist Ads Review' type='storyboard'>
+      <style />
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='2' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98340' id='1' param='vert' removable='false' w='98426' x='787' y='830'>
+            <zone _.fcp.SetMembershipControl.false...type='title' _.fcp.SetMembershipControl.true...type-v2='title' h='3423' id='3' w='98426' x='787' y='830' />
+            <zone _.fcp.SetMembershipControl.false...type='flipboard-nav' _.fcp.SetMembershipControl.true...type-v2='flipboard-nav' h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' w='98426' x='787' y='4253' />
+            <zone _.fcp.SetMembershipControl.false...type='flipboard' _.fcp.SetMembershipControl.true...type-v2='flipboard' h='84440' id='5' paired-zone-id='4' removable='false' w='98426' x='787' y='14730'>
+              <flipboard active-id='1' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point caption='Distribution of Price' captured-sheet='Dashboard 1' id='1' />
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{AA7802EF-37A8-4E10-BA00-199DFAB4A4FE}' />
+    </dashboard>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='4' w='100000' x='0' y='0'>
+          <zone h='17375' id='3' name='Avg Resale Price' show-title='false' w='98400' x='800' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='80625' id='5' name='Manufacturer &amp; Price' w='98400' x='800' y='18375'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='9' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='8' param='vert' w='98400' x='800' y='1000'>
+                <zone fixed-size='131' h='17375' id='3' is-fixed='true' name='Avg Resale Price' show-title='false' w='98400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='80625' id='5' is-fixed='true' name='Manufacturer &amp; Price' w='98400' x='800' y='18375'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{81DEF499-EAD4-41CA-A9A1-E188A7A3888D}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Manufacturer &amp; Price'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.06vrzp81njresr11zd6rt0a94f0n].[none:manufacturer:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DEE05CC7-8259-4466-9445-E834739BD394}' />
+    </window>
+    <window class='worksheet' name='Who takes good care of his car?'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.06vrzp81njresr11zd6rt0a94f0n].[none:condition:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5ABBAAA4-C134-44D0-B518-5C15CF98B012}' />
+    </window>
+    <window class='worksheet' name='Avg Resale Price'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3288B098-E09E-4686-AD01-329BBD02F209}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Avg Resale Price' />
+        <viewpoint name='Manufacturer &amp; Price'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{FB868668-D56A-4690-9C46-2456416261F1}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Craigslist Ads Review'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{6AB9F126-6022-4C41-862E-0AA18004FC31}' />
+    </window>
+  </windows>
+</workbook>
